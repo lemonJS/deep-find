@@ -1,8 +1,17 @@
 {
   "name": "deepfind",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find nested keys in an object",
   "main": "index.js",
+  "keywords" :[
+    "find",
+    "object",
+    "nested",
+    "key",
+    "values",
+    "deep",
+    "deepfind"
+  ],
   "scripts": {
     "test": "mocha --recursive"
   },
