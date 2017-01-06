@@ -1,12 +1,12 @@
 'use strict';
 
-const deepFind = (object, key) => {
+const deepfind = (object, key) => {
   if (!object || typeof object !== 'object') {
-    throw new Error('deepFind must be supplied an object');
+    throw new Error('deepfind must be supplied an object');
   }
 
   if (!key || typeof key !== 'string') {
-    throw new Error('deepFind must be supplied a key');
+    throw new Error('deepfind must be supplied a key');
   }
 
   let objects = [];
@@ -17,7 +17,7 @@ const deepFind = (object, key) => {
     }
 
     if (typeof object[i] == 'object') {
-      objects = objects.concat(deepFind(object[i], key));
+      objects = objects.concat(deepfind(object[i], key));
     } else if (i === key) {
       objects.push(object[i]);
     }
@@ -27,4 +27,4 @@ const deepFind = (object, key) => {
   return objects;
 }
 
-module.exports = deepFind;
+module.exports = deepfind;

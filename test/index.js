@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const deepFind = require('../index');
+const deepfind = require('../index');
 
 const simpleFixture = {
   'key': 'value'
@@ -19,29 +19,29 @@ const complexFixture = {
   }
 };
 
-describe('deepFind', () => {
+describe('deepfind', () => {
 
   it('should throw an error when given no object', () => {
-    expect(() => deepFind(null, 'key')).to.throw('deepFind must be supplied an object');
+    expect(() => deepfind(null, 'key')).to.throw('deepfind must be supplied an object');
   });
 
   it('should throw an error when given no key', () => {
-    expect(() => deepFind({}, null)).to.throw('deepFind must be supplied a key');
+    expect(() => deepfind({}, null)).to.throw('deepfind must be supplied a key');
   });
 
   it('should return an empty array when no key is found', () => {
-    expect(deepFind({}, 'key')).to.be.an.array;
-    expect(deepFind({}, 'key')).to.be.empty;
+    expect(deepfind({}, 'key')).to.be.an.array;
+    expect(deepfind({}, 'key')).to.be.empty;
   });
 
   it('should return an array when one value matches', () => {
-    expect(deepFind(simpleFixture, 'key')).to.be.an.array;
-    expect(deepFind(simpleFixture, 'key')).to.deep.equal(['value']);
+    expect(deepfind(simpleFixture, 'key')).to.be.an.array;
+    expect(deepfind(simpleFixture, 'key')).to.deep.equal(['value']);
   });
 
   it('should return an array when multiple values match', () => {
-    expect(deepFind(complexFixture, 'key')).to.be.an.array;
-    expect(deepFind(complexFixture, 'key')).to.deep.equal(['value1', 'value2', 'value3'])
+    expect(deepfind(complexFixture, 'key')).to.be.an.array;
+    expect(deepfind(complexFixture, 'key')).to.deep.equal(['value1', 'value2', 'value3'])
   });
 
 });
