@@ -19,7 +19,7 @@
   "author": "lemonjs",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lemonJS/DeepFind.git"
+    "url": "git://github.com/lemonJS/deep-find.git"
   },
   "licenses": [
     {
