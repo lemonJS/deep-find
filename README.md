@@ -1,34 +1,33 @@
 # DeepFind
-Deep find recursively looks through an object and extracts matching keys.
 
-[![Build Status](https://travis-ci.org/lemonJS/DeepFind.svg)](https://travis-ci.org/lemonJS/DeepFind)
+Deep find recursively looks through an object and extracts matching keys.
 
 ## Install
 
 ```bash
-$ npm install --save deepfind
+$ yarn add deepfind
 ```
 
 ## Usage
 
 ```javascript
-const deepfind = require('deepfind');
+import { deepfind } from 'deepfind';
 
-const OBJ = {'key', 'value'};
-const KEY = 'key';
+const object = { 'key', 'value' };
+const key = 'key';
 
-deepfind(OBJ, KEY);
+deepfind(object, key); // -> ['value']
 ```
 
 ## Tests
 
 ```bash
-npm install
-npm test
+yarn install
+yarn test
 ```
 
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2017 Lewis Monteith
+Copyright (c) 2017-2021 Lewis Monteith
