@@ -1,6 +1,6 @@
 {
   "name": "deepfind",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Find nested keys in an object",
   "main": "dist/deepfind.js",
   "keywords": [
