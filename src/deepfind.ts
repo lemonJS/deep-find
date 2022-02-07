@@ -1,8 +1,9 @@
-interface DeepFindObject {
-  [key: string]: any;
-}
+export type DeepFindObject = Record<string, any>;
 
-export function deepfind(object: DeepFindObject, key: string): string[] {
+export function deepfind<T extends DeepFindObject>(
+  object: T, 
+  key: string,
+): string[] {
   let results: string[] = [];
 
   for (const k in object) {
